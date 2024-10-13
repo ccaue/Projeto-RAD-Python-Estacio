@@ -79,12 +79,12 @@ def limpar():  # Limpa os campos do formulário após entrada dos dados.
 
 
 def att_alunos():  # Atualiza a lista de alunos.
-    for row in treeview.get_children():
-        treeview.delete(row)
+    for linha in treeview.get_children():
+        treeview.delete(linha)
 
     cursor.execute('SELECT id, nome, av1, av2, media, situacao FROM alunos')
-    for row in cursor.fetchall():
-        treeview.insert('', tk.END, values=row)
+    for linha in cursor.fetchall():
+        treeview.insert('', tk.END, values=linha)
 
 
 # Interface gráfica utilizando Tkinter.
